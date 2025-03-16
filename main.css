@@ -1,0 +1,33 @@
+body {
+  background-color: #222;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+}
+
+.game-container {
+  width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.resources {
+  margin-bottom: 20px;
+}
+
+.farm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 5px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #555;
+  border: 2px solid #777;
+  cursor: pointer;
+}
+
+.cell.seed { background-color: #8b4513; } /* Семя */
+.cell.growing { background-color: #9acd32; } /* Росток */
+.cell.ready { background-color: #ffd700; } /* Урожай */
