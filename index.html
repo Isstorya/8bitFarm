@@ -1,19 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <title>8-битная ферма</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <div class="game-container">
-      <div class="resources">
-        <p>Деньги: <span id="money">50</span></p>
-        <p>Семена пшеницы: <span id="wheat-seeds">5</span></p>
-        <button id="buy-seeds">Купить семена (10 монет)</button>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <title>8-битный симулятор фермы</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="ui">
+      <p>Деньги: <span id="money">100</span></p>
+      <p>Энергия: <span id="energy">10</span></p>
+      <p>День: <span id="day">1</span></p>
+      <p>Семена: Пшеница: <span id="wheat-seeds">5</span> | Морковь: <span id="carrot-seeds">3</span> | Кукуруза: <span id="corn-seeds">2</span></p>
+      <button id="tool-hoe">Мотыга</button>
+      <button id="tool-water">Лейка</button>
+      <button id="plant-wheat">Пшеница (5)</button>
+      <button id="plant-carrot">Морковь (10)</button>
+      <button id="plant-corn">Кукуруза (15)</button>
+      <button id="end-day">Завершить день</button>
+    </div>
+    <div class="viewport">
       <div class="farm-grid" id="farm-grid"></div>
     </div>
-    <script src="index.js"></script>
-  </body>
+  </div>
+  <script src="index.js"></script>
+</body>
 </html>

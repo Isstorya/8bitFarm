@@ -1,33 +1,70 @@
 body {
-  background-color: #222;
+  background-color: #1a1a1a;
   font-family: 'Courier New', monospace;
   color: #fff;
 }
 
 .game-container {
-  width: 400px;
+  width: 100%;
+  max-width: 800px;
   margin: 20px auto;
-  text-align: center;
 }
 
-.resources {
+.ui {
   margin-bottom: 20px;
 }
 
+.viewport {
+  width: 780px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #5e4b4b;
+}
+
 .farm-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: grid;
-  grid-template-columns: repeat(4, 80px);
-  gap: 5px;
+  grid-template-columns: repeat(30, 25px);
+  gap: 1px;
 }
 
 .cell {
-  width: 80px;
-  height: 80px;
-  background-color: #555;
-  border: 2px solid #777;
+  width: 25px;
+  height: 25px;
+  background-color: #7cfc00; /* Трава по умолчанию */
+  border: 1px solid #5e4b4b;
+  position: relative;
+}
+
+.cell.tilled { background-color: #8b4513; } /* Грядка */
+.cell.seed { background-color: #a0522d; }
+.cell.growing { background-color: #9acd32; }
+.cell.ready { background-color: #ffd700; }
+.cell.stone { background-color: #808080; } /* Камень */
+
+.player {
+  width: 15px;
+  height: 15px;
+  background-color: #ff4500;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#end-day {
+  margin-left: 10px;
+  background-color: #4a2f2f;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
-.cell.seed { background-color: #8b4513; } /* Семя */
-.cell.growing { background-color: #9acd32; } /* Росток */
-.cell.ready { background-color: #ffd700; } /* Урожай */
+#end-day:hover {
+  background-color: #6b4e4e;
+}
